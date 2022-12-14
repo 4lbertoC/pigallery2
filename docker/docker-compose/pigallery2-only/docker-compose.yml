@@ -7,11 +7,11 @@ services:
       - NODE_ENV=production
     volumes:
       - "./pigallery2/config:/app/data/config" # CHANGE ME
-      - "db-data:/app/data/db"
+      - "./pigallery2/db-data:/app/data/db"
       - "./pigallery2/images:/app/data/images:ro" # CHANGE ME, ':ro' mean read-only
       - "./pigallery2/tmp:/app/data/tmp" # CHANGE ME
     ports:
-      - 80:80
+      - 8088:80
     restart: always
 
 volumes:
